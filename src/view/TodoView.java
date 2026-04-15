@@ -72,6 +72,7 @@ public class TodoView {
         String task = sc.next();
 
         //todoService.addTodo 호출
+        todoService.addTodo(date, time, task);
         System.out.println("저장 완료!");
     }
 
@@ -96,6 +97,7 @@ public class TodoView {
         String task = sc.next();
 
         // todoService.updateTodo 호출
+        todoService.updateTodo(date, index, time, task);
         System.out.println("수정 완료!");
     }
 
@@ -114,6 +116,7 @@ public class TodoView {
         int index = sc.nextInt() - 1;
 
         // todoService.deleteTodo 호출
+        todoService.deleteTodo(date, index);
         System.out.println("삭제 완료!");
     }
 
@@ -132,6 +135,7 @@ public class TodoView {
         int index = sc.nextInt() - 1;
 
         // todoService.completeTodo 호출
+        todoService.completeTodo(date, index);
         System.out.println("완료 처리 완료!");
     }
 
