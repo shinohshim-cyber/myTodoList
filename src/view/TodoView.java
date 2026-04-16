@@ -89,7 +89,11 @@ public class TodoView {
 
         System.out.print("수정할 번호 선택: ");
         int index = sc.nextInt() - 1;
-
+        //  할 일 리스트 중 선택한 할 일이 이미 완료되어  있다면 그냥 리턴
+        if(list.get(index).isCompleted())  {
+            System.out.println("이미 완료된 할 일입니다. 다시 선택하세요.");
+            return;
+        }
         System.out.print("새 시간 입력: ");
         String time = sc.next();
 
